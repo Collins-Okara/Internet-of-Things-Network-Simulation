@@ -30,3 +30,17 @@ I generated the following graphs:
 and macMaxBE = 4.
 To generate each point of your graphs, I performed at least 10 independent
 replicas, where each replica consists of at least 1000 packet attempts. My graphs also shows, for each simulation result, confidence intervals with 95% confidence level. (Hint: Use a common parameter that you can change dynamically at simulation time to represent the channel shared by the n nodes.)
+
+Task 3:
+I Implemented  the following performance metric:
+• Average energy consumption (E): defined as the average value of the energy consumed during the reporting of the event. The energy consumed during the reporting of an
+event is the average energy consumed by all nodes in the network during the reporting of the event. It characterizes the energy efficiency of the CSMA/CA scheme. You should only consider energy consumption during transmission (TX) and reception (RX) mode. Therefore, consider (i) energy spent during CCA assessment (i.e., radio is in RX mode during that time); (ii) energy spent during transmission (i.e., radio is in TX mode during packet transmission.
+
+Graphs generated:
+1. Average energy consumption (expressed in mJ) as a function of network size n ∈ {5, 10, 20, 30, 40, 50}.
+Simulation Parameters The following set of CSMA/CA parameter values should be used, unless specified otherwise: macMinBE = 3, macMaxBE = 4, macMaxCSMABackoffs = 2. To run realistic simulations, I complied to the IEEE 802.15.4 specifications and use the radio parameters of the Texas Instrument (TI) 2.4 GHz IEEE 802.15. 4/ZigBee-ready RF Transceiver CC2420 [1]. Therefore, assume as Dbp = 0.00032s, TCCA = Dbp/20·8 = 0.000128s. For energy consumption, use PRX = 56.4mW and PTX = 49.5mW, and ignore power consumption in sleep mode. Since the CC2420 radio has a bitrate of 250 Kbit/s, and the full IEEE 802.15.4 is long 133 bytes [2], set the packet duration to Dp = 4.256ms.
+
+References:
+[1] Texas Instruments, “CC2420: 2.4 GHz IEEE 802.15. 4/ZigBee-ready RF Transceiver,” Available at http://www.ti.com/lit/ds/symlink/cc2420.pdf, 2006.
+[2] G. Shi and K. Li, “Fundamentals of ZigBee and WiFi,” in Signal Interference in WiFi
+and ZigBee Networks, pp. 9–27, Springer, 2017.
