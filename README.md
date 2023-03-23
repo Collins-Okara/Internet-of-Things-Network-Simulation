@@ -14,3 +14,6 @@ moves to step 3.
 	(b) If the medium is busy, state variables are updated as follows: NB = NB+1 and BE = min(BE+1,macMaxBE). If the number of backoff stages has exceeded the maximum 					allowed value (i.e. NB > macMaxCSMABackoffs), the frame is 1 dropped. The new backoff time is extracted after Dbp − TCCA time. Otherwise, the algorithm falls back 				to step 2.
 In this Project, we will focus on evaluating the performance of the unslotted CSMA/CA
 scheme in perfect channel conditions.
+
+Task 1:
+	Implemented a module named SensorNodeCSMACA that uses the unslotted CSMA/CA schemeof the NBE IEEE 802.15.4 summarized in the previous section to access the physical channeland transmit a data packet. In order to test your module, I implemented a SinkNodeCSMACAmodule that is connected to a SensorNodeCSMACA node and collects its data. For the sake of simplicity, I assumed that if the node finds the channel free at a particular time, the CCA is passed (i.e., TCCA = 0 for the purpose of assessing whether the channel is free). Furthermore, I assume the channel as binary (i.e., busy/free). My SensorNodeCSMACA module obtained the CSMA/CA parameters through the par(·) command passed through the .INI file of your simulation.
